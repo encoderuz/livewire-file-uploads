@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', \App\Livewire\Uploads\Single::class)->name('single.upload');
+Route::get('/multiple-upload', \App\Livewire\Uploads\Multiple::class)->name('multiple.upload');
